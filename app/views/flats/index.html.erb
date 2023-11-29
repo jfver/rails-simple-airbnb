@@ -1,0 +1,13 @@
+<% @flats.each do |flat| %>
+    <%= render flat %>
+    <p>
+      <%= link_to "Show this flat", flat %>
+      <%= link_to "Edit this flat", edit_flat_path(flat) %>
+      <%= link_to "Delete",
+      flat_path(flat),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+    </p>
+<% end %>
+
+<%= link_to "Create new flat", new_flat_path  %>

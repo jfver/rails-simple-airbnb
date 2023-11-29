@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Flat.destroy_all
+puts "creating"
+5.times do |i|
+  flat = Flat.create(
+    name: "#{i} Light & Spacious Garden Flat London",
+    address: "#{i*10} Clifton Gardens London W9 1DT",
+    description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
+    price_per_night: 75,
+    number_of_guest: 3
+  )
+  puts "created"
+end
